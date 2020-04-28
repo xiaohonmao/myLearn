@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let xhr = new XMLHttpRequest();
+        xhr.addEventListener('load',loadHandler);
+        xhr.open("GET","http://localhost:3000");
+        xhr.send();
+
+        function loadHandler(e){
+            // 服务端返回给客户端的内容
+            console.log(xhr.response)
+        }
+    </script>
+</body>
+</html>
